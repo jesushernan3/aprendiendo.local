@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/RobotoCondensed-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Roboto;
+  text-decoration: none;
+}
+body {
+  background-color: #eee;
+
+  display: grid;
+  /*grid-template-rows: 5em 50vh auto 10em;*/
+  /*grid-template-columns: 1fr 5fr 2fr 1fr;*/
+  grid-template: 
+  	"header header header header" 5em
+  	"hero hero hero hero" 50vh
+  	". main sidebar ." auto
+  	"footer footer footer footer" 10em
+  	/ 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+  	grid-column-gap: 1.5em;
+}
+header {
+	grid-area: header;
+	display: grid;
+  grid-template-columns: 1fr 2fr;
+	grid-template-areas:
+		"titulo nav";
+}
+.hero {
+	grid-area: hero;
+}
+main {
+	grid-area: main;
+}
+aside {
+	grid-area: sidebar;
+
+  background: lightgray;
+  padding: 2em;
+}
+footer {
+	grid-area: footer;
+}
+
+header, footer {
+	background-color: black;
+	color: yellow;
+	/*display: flex;*/
+	/*justify-content: center;*/
+	/*-ms-align-items: center;*/
+	/*align-items: center;*/
+}
+main > h1 {
+	margin: 10px 0;
+}
+.header-title {
+	color: yellow;
+	font-size: 1.8em;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+  grid-area: titulo;
+}
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title {
+  font-size: 3em;
+  margin: 0;
+  grid-area: titulo;
+}
+
+.hero-subtitle {
+  color:white;
+  font-size: 1.5em;
+  margin: 0;
+}
+.card {
+  display: grid;
+  grid-template:
+    "img title" min-content
+    "img content" auto / 1fr 3fr;
+  grid-column-gap: 1.5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+.card-title {
+  grid-area: title;
+  margin: 0;
+  font-weight: 300;
+}
+.card-content {
+  grid-area: content;
+}
+.card-content a {
+	color: darksalmon;
+	font-size: 1.1em;
+}
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+/*====================
+  Main Nav
+  ====================*/
+.main-nav {
+	display: flex;
+	grid-area: nav;
+	position: relative;
+}
+.main-nav > ul, .main-nav > ul > li, .main-nav > ul > li > a {
+	display: flex;
+	flex: 1;
+	position: relative;
+}
+.main-nav > ul > li > a {
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+	color: orange;
+	background-color: #111;
+}
+.main-nav .menues {
+	transition: all 0.8s ease;
+}
+
+.main-nav .dropdown {
+	display: none;
+	position: absolute;
+	flex-direction: column;
+	top: 100%;
+	background: cadetblue;
+	width: 100%
+}
+.main-nav .active .dropdown {
+	display: flex;
+}
+.main-nav .dropdown a {
+	/*width: 165px;*/
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
