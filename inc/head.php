@@ -9,5 +9,5 @@
 		<?php parametro_plantilla("titulo_pagina");	?>		
 		</title>
 	</head>
-	<body>
+	<body <?php idBody("id_body");?>>
 	<?php include ('partials/header.php'); ?>

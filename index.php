@@ -1,6 +1,7 @@
 
 <?php 
 $raiz = "../";
+$id_body = "id=\"index\"";
 include_once ("php/funciones-comunes.php");
 $titulo_pagina = 'Aprendiendo el mero mero';
 include ("inc/head.php");

@@ -6,4 +6,10 @@ function parametro_plantilla($variable) {
     echo 'sin datos cargados';
   }
 }
+
+function idBody($parametro) {
+  if (isset($GLOBALS[$parametro])) {
+    echo $GLOBALS[$parametro];
+  }
+}
 ?>
