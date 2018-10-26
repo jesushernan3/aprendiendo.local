@@ -2,7 +2,7 @@
 	<ul>
 		<li class="menues"><a href="#">JS</a>
 			<ul class="dropdown">
-				<li><a href="../views/views-js/variables-js.php">Variables</a></li>
+				<li><a href="../views/variables-js.php">Variables</a></li>
 				<li><a href="#">submenu 2</a></li>
 				<li><a href="#">submenu 3</a></li>
 				<li><a href="#">submenu 4</a></li>

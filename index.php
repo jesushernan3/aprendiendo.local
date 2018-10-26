@@ -1,7 +1,9 @@
 
 <?php 
-$titulo_pagina = 'Jome Parendiendo';
-include "inc/head.php";
+$raiz = "../";
+include_once ("php/funciones-comunes.php");
+$titulo_pagina = 'Aprendiendo el mero mero';
+include ("inc/head.php");
 ?>
 
 
