@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pruebas</title>
+
+  <style>
+    body {
+      background-color: #ddd
+    }
+
+    header,
+    footer {
+      background-color: #333;
+      color: #ddd;
+      text-align: center;
+      padding: 10px;
+      font-size: 1.5rem
+    }
+
+    main {
+      clear: both
+    }
+
+    nav {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      width: 100px;
+      float: left;
+      background: #dbdbdb;
+      line-height: 2em;
+      text-align: center;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    ul li span {
+      display: block;
+    }
+
+    ul li ul {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    cabecera
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <span class="dropDown">Item 1</span>
+        <ul>
+          <li>Sub Item 1</li>
+          <li>Sub Item 2</li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropDown">Item 2</span>
+        <ul>
+          <li>Sub Item 1</li>
+          <li>Sub Item 2</li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropDown">Item 3</span>
+        <ul>
+          <li>Sub Item 1</li>
+          <li>Sub Item 2</li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropDown">Item 4</span>
+        <ul>
+          <li>Sub Item 1</li>
+          <li>Sub Item 2</li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </nav>
+  <main>
+    <h1>contenido</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde a voluptatem, iure, corrupti et sint laudantium
+      voluptatibus eos est illo ullam totam veniam molestiae cum sit maiores eius hic earum.</p>
+  </main>
+  <footer>
+    pie de pagina
+  </footer>
+  <script>
+    let opened = null;
+    const toggleVisibility = e => e.classList.toggle("show");
+
+    const handleDropdown = e => {
+      const clickedItem = e.parentElement.lastChild.previousSibling;
+
+      toggleVisibility(clickedItem);
+
+      if (!opened) {
+        opened = clickedItem;
+      } else if (opened == clickedItem) {
+        opened = null;
+      } else {
+        toggleVisibility(opened);
+        opened = clickedItem;
+      }
+    };
+
+    const handleClick = e => {
+      if (e.target.className.includes("dropDown")) {
+        handleDropdown(e.target);
+      } else if (opened) {
+        toggleVisibility(opened);
+        opened = null;
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+
+  </script>
+</body>
+
+</html>
