@@ -39,7 +39,7 @@ body {
 }
 body {
   grid-template:
-    "header header header header" 5em
+    "header header header header" 3em
     ". main sidebar ." auto
     "footer footer footer footer" 10em
     / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
@@ -79,7 +79,7 @@ header {
   grid-area: hero;
 }
 .header-title {
-  font-size: 1.5em;
+  font-size: 1.1em;
   display: flex;
   justify-content: center;
   -ms-align-items: center;
@@ -157,7 +157,36 @@ pre[rel="CODIGO"]::before {
 /*====================
   Main Nav
   ====================*/
+#main-nav {
+  grid-area: nav;
+}
+ul {
+  position: absolute;
+}
 
+ul li.menues {
+  float: left;
+  min-width: 110px;
+}
+ul li {
+  background: #044952;
+  line-height: 3em;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li a {
+  display: block;
+}
+
+ul li ul {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: absolute;
+}
 /* Contenido
 ====================== */
 main {

@@ -3,9 +3,7 @@ const toggleVisibility = e => e.classList.toggle("show");
 
 const handleDropdown = e => {
   const clickedItem = e.parentElement.lastChild.previousSibling;
-
   toggleVisibility(clickedItem);
-
   if (!opened) {
     opened = clickedItem;
   } else if (opened == clickedItem) {
