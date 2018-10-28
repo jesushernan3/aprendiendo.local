@@ -30,7 +30,7 @@ body {
   display: grid;
   font-size: 1.5rem;
   grid-template:
-    "header header header header" 5em
+    "header header header header" 3em
     "hero hero hero hero" 50vh
     ". main sidebar ." auto
     "footer footer footer footer" 10em
@@ -159,8 +159,10 @@ pre[rel="CODIGO"]::before {
   ====================*/
 #main-nav {
   grid-area: nav;
+  display: flex;
+  justify-content: right;
 }
-ul {
+ul.main-nav-contenedor {
   position: absolute;
 }
 
@@ -177,15 +179,21 @@ ul li {
 
 ul li a {
   display: block;
+  padding: 0 1.5rem;
 }
-
+ul li a:hover {
+  background-color: #03383f;
+}
 ul li ul {
   display: none;
 }
-
 .show {
   display: block;
   position: absolute;
+  border-top: 1px solid #03383f;
+}
+ul .menues:last-child .show {
+  right: 0;
 }
 /* Contenido
 ====================== */

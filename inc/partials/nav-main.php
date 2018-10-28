@@ -1,5 +1,5 @@
 <nav id="main-nav">
-	<ul>
+	<ul class="main-nav-contenedor">
 		<li class="menues">
 			<a href="#" class="dropDown">JS</a>
 			<ul>
