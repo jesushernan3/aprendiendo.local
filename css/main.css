@@ -4,12 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-main > ul li,
-section > ul li {
-  list-style-type: circle;
-  margin: 10px 0 20px 2.2em;
-  font-size: 1.3rem;
-}
+
 /* Normalizador
 ====================== */
 * {
@@ -44,6 +39,17 @@ body {
     "footer footer footer footer" 10em
     / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
 }
+body ul li {
+  text-decoration: none;
+  background: no-repeat;
+  text-align: left;
+}
+main > ul li,
+section > ul li {
+  list-style-type: circle;
+  margin: 10px 0 20px 2.2em;
+  font-size: 1.3rem;
+}
 a {
   color: #7fffd4;
 }
@@ -54,7 +60,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 2rem 0 3rem 0;
+  margin: 3rem 0 2rem 0;
 }
 hr {
   margin-top: 21px;
@@ -63,9 +69,27 @@ hr {
   border-top: 1px solid #596a7b;
 }
 p {
-  margin: 0 0 1em 20px;
+  margin: 0 0 2em 20px;
 }
-
+.standard-table {
+  font-size: 1.2rem;
+  background-color: #1c2935;
+  margin: 2rem 0;
+}
+.standard-table tr td {
+  padding: 5px;
+}
+.standard-table tbody tr:nth-child(2n + 1) {
+  background: #2b3e50;
+}
+.standard-table thead tr th {
+  border: 2px solid #fff;
+  border-bottom: 2px solid #d4dde4;
+  background: #eaeef2;
+  background: rgba(212, 221, 228, 0.5);
+  padding: 2px 8px 4px;
+  font-weight: 700;
+}
 /* Header
 ====================== */
 header {
@@ -141,7 +165,6 @@ pre[rel]::before {
 pre[rel="PHP"]::before {
   background: #298f8c;
 }
-
 /*  Color de fondo para :before js --------- */
 pre[rel="JS"]::before {
   background: #f46903;
@@ -153,6 +176,9 @@ pre[rel="COMMENT"]::before {
 /* Color de fondo para :before codigo ------------*/
 pre[rel="CODIGO"]::before {
   background: #555;
+}
+pre[class="language-*"] {
+  margin-bottom: 3rem;
 }
 /*====================
   Main Nav
@@ -169,14 +195,14 @@ ul.main-nav-contenedor {
 ul li.menues {
   float: left;
   min-width: 110px;
-}
-ul li {
   background: #044952;
   line-height: 3em;
   text-align: center;
   cursor: pointer;
 }
-
+ul li.menues li {
+  background: #044952;
+}
 ul li a {
   display: block;
   padding: 0 1.5rem;

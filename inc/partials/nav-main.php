@@ -4,7 +4,7 @@
 			<a href="#" class="dropDown">JS</a>
 			<ul>
 				<li><a href="../views/variables-js.php">Variables</a></li>
-				<li><a href="#">submenu 2 mas largo</a></li>
+				<li><a href="../views/operadores-js.php">Operadores</a></li>
 				<li><a href="#">submenu 3</a></li>
 				<li><a href="#">submenu 4</a></li>
 				<li><a href="#">submenu 5</a></li>
@@ -53,7 +53,7 @@
 		<li class="menues">
 			<a href="#" class="dropDown">Notas</a>
 			<ul>
-				<li><a href="#">submenu 1</a></li>
+				<li><a href="#">Teorias</a></li>
 				<li><a href="#">submenu 2</a></li>
 				<li><a href="#">submenu 3</a></li>
 			</ul>

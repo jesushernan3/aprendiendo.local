@@ -8,24 +8,18 @@ include($raiz . "inc/head.php");
 <main>
 
 <H1>VARIABLES</H1>
-	<p>Como casi en todos, sino en todos los lenguajes de programación, las variables son básicamente cajas abstractas donde almacenar todo tipo de información.</p>
-    <hr>
 
-  <h3>* Declaración de Variables</h3>
+  <h3>Declaración de Variables</h3>
   <p>Hay tres tipos de declaración(creación) de variables en JavaScript.</p>
 
-  <p> <code>var</code><br>
-  declara la variable, inicializandola opcionalmente a un valor</p>
+  <p> <code>var</code> declara la variable, inicializandola opcionalmente a un valor</p>
   
-	<p><code><a href="#let">let</a></code><br>
-  declara una variable local a nivel de bloque, inicializandola opcionalmente a un valor</p>
+	<p><code><a href="#let">let</a></code> declara una variable local a nivel de bloque, inicializandola opcionalmente a un valor</p>
   
-	<p><code><a href="#const">const</a></code><br>
-  declara una variable local sólo de lectura a nivel de bloque, llamada constante.</p>
+	<p><code><a href="#const">const</a></code> declara una variable local sólo de lectura a nivel de bloque, llamada constante.</p>
   
-  <p>Las <em>variables</em> se usan como nombres simbólicos para los valores dentro de tu aplicación. Estos nombres son llamados <em>identificadores</em>. Todas las variables deben ser identificados con un nombre único.</p>
-	<p>Reglas generales para la construcción de nombres para variables:</p>
-	<p>
+  <h3>Identificadores (nombres)</h3>
+
 		<ul>
 			<li>Nombres pueden contener letras, dígitos, guiones bajos(<code>_</code>) y signo monetario (<code>$</code>).</li>
 			<li>Nombres deben comenzar con una letra.</li>
@@ -33,7 +27,7 @@ include($raiz . "inc/head.php");
 			<li>Nombres son sensibles a Mayúscula/Minúscualas.</li>
 			<li>Palabras reservadas (keywords en JavaScript) no pueden ser usadas como nombres.</li>
 		</ul>
-  </p>
+  
   
   <pre class="language-js" rel="js"><code class="language-js">var nombreVariable;
 var nombre_variable;
@@ -41,8 +35,8 @@ var nombre33variable;
 var $nombreVariable;
 var _nombreVariable;</code></pre>
 
-<hr>
-	<h3>* Inicializar una variable</h3>
+
+	<h3>Inicializar una variable</h3>
 
 	<p>Si al declarar una variable se le asigna un valor, esto indica que la variable ha sido <strong>inicializada</strong>. <br>
 	 En JavaScript no es obligatorio inicializar las variables, ya que se pueden declarar por una parte y asignarles un valor posteriormente.</p>
@@ -52,9 +46,9 @@ variable_1 = 3;</code></pre>
 <p>Se pueden declarar varias variables en una sola sentencia de código. Se comienza por alguna de las palabras reservadas como <code>var</code>, <code>let</code>(es6) ó <code>const</code>(es6) una sola vez y los nombres se separan por <strong>coma</strong> <code>,</code>.</p>
 	<pre class="language-js" rel="js"><code>var persona = "Pedro Escamoso", cocheNombre = "Ikigai", precio = 33000; </code></pre>
 
-<hr>
 
-	<h3>* Valor de variable = undefined</h3>
+
+	<h3>Valor de variable = undefined</h3>
 	<p>A veces variables son declaradas sin ningún valor. El valor puede ser algo calculado posteriormente, o algo que será introducido luego por el usuario.</p>
 	<p>Aún así una variable declarada sin valor tendrá no obstante un valor de <strong>undefined</strong>.</p>
 	<pre class="language-js" rel="js"><code>var nombreVariable; // valor de nombreVariable es undefined.
@@ -63,16 +57,14 @@ variable_1 = 3;</code></pre>
 	<p><i class="fas fa-exclamation"></i> Tratar de acceder a una variable no declarada resultará e un error de referencia ó <em>ReferenceError</em>.</p>
 	<pre class="language-js" rel="js"><code>console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined</code></pre>
 
-	<hr>
-
-	<h3>* Redeclaración de variables</h3>
+	<h3>Redeclaración de variables</h3>
 	<p>En una redeclaración de variable, ésta no pierde su valor inicial</p>
 	<pre class="language-js" rel="js"><code>var nombre = "Dede"; // Valor inicial de nombre es "Dede"
 	var nombre; // Redeclaración de variable, mantiene su valor inicial de "Dede"</code></pre>
 
-	<hr>
+	
 
-	<h3>* Alcance de variables</h3>
+	<h3>Alcance de variables</h3>
 	<p>El alcance determina la accesibilidad (visibilidad) de una variable. Hay dos tipos de alcance: <strong>Local</strong> y <strong>Global</strong></p>
 	<p>cuando declaras una variable fuera de cualquier función, es llamada una variable <em>global</em> porque está disponible a cualquier parte del código en el documento actual.</p>
 
@@ -109,9 +101,9 @@ console.log(cocheNombre); // resutlado será Volvo</code></pre>
 }
 console.log(cocheNombre); // ReferenceError: y is not defined</code></pre>
 
-	<hr>
+	
 
-	<h3 id="let">* <code>Let</code>(es6)</h3>
+	<h3 id="let"><code>Let</code>(es6)</h3>
 	<p><code>let</code> se usa para declarar variables con un alzance local para el ámbito donde reside la variable. Que a diferencia de <code>var</code> define la variable globalmente, o localmente a una funcion entera al margen del alcance de bloque.</p>
 	<pre class="language-js" rel="js"><code>function varTest() {
   var x = 1;
@@ -137,9 +129,9 @@ let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined</code></pre>
 
-	<hr>
+	
 
-	<h3 id="const">* <code>Const</code>(es6)</h3>
+	<h3 id="const"><code>Const</code>(es6)</h3>
 	<p>Las constantes tienen un ámbito de bloque, al igual que las variables definidas mediante la instrucción <code>let</code>. El valor de una constante no puede cambiar a través de la reasignación y no puede ser redeclarado.</p>
 	<p>su declaración crea una constante cuyo alcance puede ser global o local para el bloque en el que se declara. Las constantes globales no se convierten en propiedades del objeto <em>window</em>, a diferencia de las <code>var</code> variables. Se requiere un inicializador para una constante; es decir, debe especificar su valor en la misma declaración en la que se ha declarado (lo cual tiene sentido, dado que no puede modificarse más adelante).</p>
 	<pre class="language-js" rel="js"><code>const PI = 3.14;</code></pre>
