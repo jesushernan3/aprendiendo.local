@@ -139,6 +139,17 @@ console.log(this.y); // undefined</code></pre>
 	<p>Las reglas de alcance para constantes son las mismas que para las variables de bloque de ámbito. Si se omite la palabra clave const, se supone que el identificador representa una variable.</p>
 
 	<p>La declaración <code>const</code> crea una referencia de solo lectura a un valor. No significa que el valor que tiene es inmutable, solo que el identificador de la variable no puede ser reasignado. Por ejemplo, en el caso donde el contenido es un objeto, esto significa que el contenido del objeto (por ejemplo, sus parámetros) puede ser alterado.</p>
+	<pre class="language-js" rel="js"><code class="language-js">// ESTO CAUSARÁ UN ERROR
+function f() {};
+const f = 5;
+
+// ESTO TAMBIÉN CAUSARÁ UN ERROR
+function f() {
+  const g = 5;
+  var g;
+
+  //sentencias
+}</code></pre>
 
 </main>
 

@@ -1,3 +1,5 @@
+// ...::: Menu Toggle :::...
+
 let opened = null;
 const toggleVisibility = e => e.classList.toggle("show");
 
@@ -24,3 +26,13 @@ const handleClick = e => {
 };
 
 document.addEventListener("click", handleClick);
+
+// ...::: Menu Fixed :::.
+
+const nav = document.querySelector(".menu-lateral");
+const topOfNav = nav.offsetTop;
+
+function fixedNav() {
+  if (condition) {
+  }
+}

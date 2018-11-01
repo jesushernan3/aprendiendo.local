@@ -60,7 +60,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 0 1rem 0;
 }
 hr {
   margin-top: 21px;
@@ -225,6 +225,7 @@ ul .menues:last-child .show {
 ====================== */
 main {
   grid-area: main;
+  padding-bottom: 2em;
 }
 aside {
   grid-area: sidebar;
@@ -283,4 +284,5 @@ aside {
 footer {
   background-color: #1c2935;
   grid-area: footer;
+  padding: 2rem;
 }
