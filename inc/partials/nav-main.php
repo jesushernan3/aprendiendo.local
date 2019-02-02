@@ -45,17 +45,17 @@
 			</ul>
 		</li>
 		<li class="menues">
-			<a href="#" class="dropDown">Frameworks</a>
+			<a href="#" class="dropDown">React JS</a>
 			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
+				<li><a href="../views/react.intro-lb.php">Intro</a></li>
+				<li><a href="../views/react.install-lb.php">Instalación</a></li>
 				<li><a href="#">submenu 3</a></li>
 			</ul>
 		</li>
 		<li class="menues">
 			<a href="#" class="dropDown">Notas</a>
 			<ul>
-				<li><a href="#">Teorias</a></li>
+				<li><a href="../views/pre.tag-notas.php">Pre tag</a></li>
 				<li><a href="#">submenu 2</a></li>
 				<li><a href="#">submenu 3</a></li>
 			</ul>

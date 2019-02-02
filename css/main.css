@@ -98,6 +98,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "titulo nav";
+  z-index: 1;
 }
 .hero {
   grid-area: hero;
@@ -181,8 +182,11 @@ pre[class="language-*"] {
   margin-bottom: 3rem;
 }
 /*====================
-  Main Nav
+  MENUES
   ====================*/
+
+/* Menu Principal 
+  ====================== */
 #main-nav {
   grid-area: nav;
   display: flex;
@@ -221,6 +225,16 @@ ul li ul {
 ul .menues:last-child .show {
   right: 0;
 }
+
+/* Menu aside 
+==================== */
+.menu-lateral {
+  display: block;
+}
+.fixed .menu-lateral {
+  position: fixed;
+}
+
 /* Contenido
 ====================== */
 main {
@@ -229,6 +243,7 @@ main {
 }
 aside {
   grid-area: sidebar;
+  position: relative;
 
   background: lightslategray;
   padding: 2em;

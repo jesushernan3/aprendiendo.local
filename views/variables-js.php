@@ -154,8 +154,15 @@ function f() {
 </main>
 
 	<aside>
-	  <h1>Sidebar stuff</h1>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat. In tempor pharetra felis at fermentum. Maecenas iaculis neque orci, sit amet sodales quam venenatis sit amet. Praesent eu enim nec velit bibendum accumsan a sed tellus. Aenean sed justo a tortor hendrerit imperdiet efficitur nec risus. Morbi gravida mi quis ultrices elementum. Pellentesque fermentum sodales sagittis. Sed vel efficitur nisl. Ut congue sodales sapien. Duis ultricies felis nunc, eu semper est tincidunt eu. Curabitur faucibus luctus eros, eget semper mauris dictum vel.</p>
+	  <h1>Variables Teorias</h1>
+	  <p>Las variables en JavaScript no tienen ningún tipo adjunto. Una vez que asigna un tipo literal específico a una variable, más tarde puede reasignar la variable para alojar cualquier otro tipo, sin errores de tipo ni ningún problema.
+</p>
+<p>
+	Esta es la razón por la que a veces se hace referencia a JavaScript como "sin tipo".
+</p>
+<p>
+	Se debe declarar una variable antes de poder usarla. Hay 3 formas de hacer esto, usando var, let o const, y esas 3 formas difieren en cómo puedes interactuar con la variable más adelante.
+</p>
 	</aside>
 
 <?php include($raiz . "inc/foot.php"); ?>
