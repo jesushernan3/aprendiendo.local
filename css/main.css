@@ -95,9 +95,6 @@ p {
 header {
   background-color: #1c2935;
   grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "titulo nav";
   z-index: 1;
 }
 .hero {
@@ -190,7 +187,6 @@ pre[class="language-*"] {
 #main-nav {
   grid-area: nav;
   display: flex;
-  justify-content: right;
 }
 ul.main-nav-contenedor {
   position: absolute;
@@ -199,7 +195,6 @@ ul.main-nav-contenedor {
 ul li.menues {
   float: left;
   min-width: 110px;
-  background: #044952;
   line-height: 3em;
   text-align: center;
   cursor: pointer;
@@ -216,6 +211,13 @@ ul li a:hover {
 }
 ul li ul {
   display: none;
+}
+.show li:hover ul {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
 }
 .show {
   display: block;
@@ -250,7 +252,7 @@ aside {
 }
 .hero {
   grid-area: hero;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  background: darkslategray;
   display: flex;
   flex-direction: column;
   align-items: center;

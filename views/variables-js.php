@@ -4,7 +4,6 @@ include_once("../php/funciones-comunes.php");
 $titulo_pagina = 'Variables JS';
 include($raiz . "inc/head.php");
 ?>
-
 <main>
 
 <H1>VARIABLES</H1>
@@ -155,7 +154,8 @@ function f() {
 
 	<aside>
 	  <h1>Variables Teorias</h1>
-	  <p>Las variables en JavaScript no tienen ningún tipo adjunto. Una vez que asigna un tipo literal específico a una variable, más tarde puede reasignar la variable para alojar cualquier otro tipo, sin errores de tipo ni ningún problema.
+<p>Las variables en JavaScript no tienen ningún tip
+o adjunto. Una vez que asigna un tipo literal específico a una variable, más tarde puede reasignar la variable para alojar cualquier otro tipo, sin errores de tipo ni ningún problema.
 </p>
 <p>
 	Esta es la razón por la que a veces se hace referencia a JavaScript como "sin tipo".

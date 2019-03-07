@@ -13,7 +13,7 @@ include ("inc/head.php");
 	<div class="hero">
 		
 	  <h1 class="hero-title">Aprendiendo</h1>
-	  <p class="hero-subtitle">Todo tipo de lenguajes de programacion</p>
+	  <p class="hero-subtitle">Front y poquito de Backend</p>
 	</div>
 
 	<main>
