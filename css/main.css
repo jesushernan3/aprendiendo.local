@@ -46,7 +46,7 @@ body ul li {
 }
 main > ul li,
 section > ul li {
-  list-style-type: circle;
+  list-style-type: disc;
   margin: 10px 0 20px 2.2em;
   font-size: 1.3rem;
 }
@@ -69,7 +69,7 @@ hr {
   border-top: 1px solid #596a7b;
 }
 p {
-  margin: 0 0 2em 20px;
+  margin: 1.5em 0 1.5em 20px;
 }
 .standard-table {
   font-size: 1.2rem;
@@ -200,7 +200,7 @@ ul li.menues {
   cursor: pointer;
 }
 ul li.menues li {
-  background: #044952;
+  background: #1c2935;
 }
 ul li a {
   display: block;
@@ -223,6 +223,9 @@ ul li ul {
   display: block;
   position: absolute;
   border-top: 1px solid #03383f;
+}
+.show a {
+  font-size: 1.3rem;
 }
 ul .menues:last-child .show {
   right: 0;

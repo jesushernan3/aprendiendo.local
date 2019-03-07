@@ -7,13 +7,6 @@ include($raiz . "inc/head.php");
 
 <main>
   <h1>COMENTAR</h1>
-  <pre class="language-js" rel="js"><code class="language-js">// comentario en una sola línea
- 
- /* este es un comentario 
-    multilínea
-  */
-  
- /* no puedes, sin embargo, /* anidar comentarios */ SyntaxError */</code></pre>
 </main>
 
 <aside>

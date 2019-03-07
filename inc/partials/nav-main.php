@@ -24,12 +24,12 @@
 					<ul>
 						<li><a href="../views/sintaxys-reglas-js.php">Sintaxys & Reglas</a></li>
 						<li><a href="../views/variables-js.php">Variables</a></li>
+						<li><a href="../views/tipos-js.php">Tipos</a></li>
 						<li><a href="#">prueba 3</a></li>
 					</ul>
 			</li>
 				<li><a href="../views/comentar-js.php">Comentar prueba largo</a></li>
 				<li><a href="../views/operadores-js.php">Operadores</a></li>
-				<li><a href="../views/tipos-js.php">Tipos</a></li>
 				<li><a href="../views/webpack-js.php">Webpack</a></li>
 				<li><a href="#">submenu 4</a></li>
 				<li><a href="#">submenu 5</a></li>
