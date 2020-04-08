@@ -5,62 +5,23 @@
   font-style: normal;
 }
 
-/* Normalizador
-====================== */
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
 /* Generales
 ====================== */
-body#index,
-body {
+body, body#index {
   background-color: #2b3e50;
   font-family: "Abel";
   color: antiquewhite;
-  display: grid;
-  font-size: 1.5rem;
-  grid-template:
-    "header header header header" 3em
-    "hero hero hero hero" 50vh
-    ". main sidebar ." auto
-    "footer footer footer footer" 10em
-    / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
-  grid-column-gap: 1.5em;
-}
-body {
-  grid-template:
-    "header header header header" 3em
-    ". main sidebar ." auto
-    "footer footer footer footer" 10em
-    / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
-}
-body ul li {
-  text-decoration: none;
-  background: no-repeat;
-  text-align: left;
-}
-main > ul li,
-section > ul li {
-  list-style-type: disc;
-  margin: 10px 0 20px 2.2em;
-  font-size: 1.3rem;
-}
+
+} 
+
 a {
   color: #7fffd4;
 }
 a:visited {
   color: #7fffd4;
 }
-h1,
-h2,
-h3,
-h4 {
-  margin: 3rem 0 1rem 0;
+p {
+  font-size: 1.5rem;
 }
 hr {
   margin-top: 21px;
@@ -68,9 +29,14 @@ hr {
   border: 0;
   border-top: 1px solid #596a7b;
 }
-p {
-  margin: 1.5em 0 1.5em 20px;
-}
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.9rem;}
+h4 {font-size: 1.8rem;}
+h5 {font-size: 1.7rem;}
+h6 {font-size: 1.6rem;}
+
+
 .standard-table {
   font-size: 1.2rem;
   background-color: #1c2935;
@@ -90,25 +56,100 @@ p {
   padding: 2px 8px 4px;
   font-weight: 700;
 }
+.card {
+	margin-bottom: 2rem;
+}
+.title {
+  color: unset;
+}
+
+
 /* Header
 ====================== */
 header {
   background-color: #1c2935;
-  grid-area: header;
   z-index: 1;
 }
-.hero {
-  grid-area: hero;
-}
-.header-title {
-  font-size: 1.1em;
+
+/*====================
+  MENUES
+  ====================*/
+
+/* Menu Principal 
+  ====================== */
+#main-nav {
+  /* override bulma */
   display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
-  grid-area: titulo;
-  margin: 0;
+  background-color: unset;
 }
+ul li.menues {
+  float: left;
+  min-width: 110px;
+  line-height: 3em;
+  text-align: center;
+  cursor: pointer;
+}
+ul li.menues li {
+  background: #1c2935;
+}
+ul li.menues a {
+  display: block;
+  padding: 0 1.5rem;
+}
+ul li a:hover {
+  background-color: #03383f;
+}
+ul li ul {
+  display: none;
+}
+.show li:hover ul {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+}
+.show {
+  display: block;
+  position: absolute;
+  border-top: 1px solid #03383f;
+}
+.show a {
+  font-size: 1.3rem;
+}
+ul .menues:last-child .show {
+  right: 0;
+}
+
+/* Menu aside 
+==================== */
+.barra-lateral {
+  display: block;
+  flex: 0 0 calc(15rem + 1.5rem);
+  background-color: darkslategray;
+}
+.barra-lateral p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+
+/* ===========================
+  CONTENIDO PRINCIPAL (<main>)
+============================== */
+main.bd-main {
+  background-color: #2b3e50;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+main li {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+/*================================
+ Vista ARITCULO
+==================================*/
 /* code
 ====================== */
 code {
@@ -143,6 +184,9 @@ pre {
   word-break: normal;
   border: none;
 }
+pre code {
+  font-size: 1rem;
+}
 pre[rel] {
   padding-top: 28px;
   margin: 20px 0 50px;
@@ -175,134 +219,60 @@ pre[rel="COMMENT"]::before {
 pre[rel="CODIGO"]::before {
   background: #555;
 }
-pre[class="language-*"] {
-  margin-bottom: 3rem;
+code[class*="language-"], pre[class*="language-"] {
+  white-space: pre-wrap;
+  tab-size: 0;
+  -moz-tab-size:0;
 }
-/*====================
-  MENUES
-  ====================*/
-
-/* Menu Principal 
-  ====================== */
-#main-nav {
-  grid-area: nav;
-  display: flex;
+.number {
+	align-items: unset;
+	background-color: unset;
+	border-radius: unset;
+	display: unset;
+	font-size: unset;
+	height: unset;
+	justify-content: unset;
+	margin-right: unset;
+	min-width: unset;
+	padding: unset;
+	text-align: unset;
+	vertical-align: unset;
 }
-ul.main-nav-contenedor {
-  position: absolute;
-}
-
-ul li.menues {
-  float: left;
-  min-width: 110px;
-  line-height: 3em;
-  text-align: center;
-  cursor: pointer;
-}
-ul li.menues li {
-  background: #1c2935;
-}
-ul li a {
-  display: block;
-  padding: 0 1.5rem;
-}
-ul li a:hover {
-  background-color: #03383f;
-}
-ul li ul {
-  display: none;
-}
-.show li:hover ul {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	width: 100%;
-}
-.show {
-  display: block;
-  position: absolute;
-  border-top: 1px solid #03383f;
-}
-.show a {
-  font-size: 1.3rem;
-}
-ul .menues:last-child .show {
-  right: 0;
-}
-
-/* Menu aside 
-==================== */
-.menu-lateral {
-  display: block;
-}
-.fixed .menu-lateral {
-  position: fixed;
-}
-
-/* Contenido
-====================== */
-main {
-  grid-area: main;
-  padding-bottom: 2em;
-}
-aside {
-  grid-area: sidebar;
-  position: relative;
-
-  background: lightslategray;
-  padding: 2em;
-}
-.hero {
-  grid-area: hero;
-  background: darkslategray;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.hero-title {
-  font-size: 3em;
-  margin: 0;
-  grid-area: titulo;
-}
-
-.hero-subtitle {
-  color: white;
-  font-size: 1.5em;
-  margin: 0;
-}
-.card {
-  display: grid;
-  grid-template:
-    "img title" min-content
-    "img content" auto / 1fr 3fr;
-  grid-column-gap: 1.5em;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-}
-.card-title {
-  grid-area: title;
-  margin: 0;
-  font-weight: 300;
-}
-.card-content {
-  grid-area: content;
-}
-.card-content a {
-  color: darksalmon;
-  font-size: 1.1em;
-}
-.card-img {
-  grid-area: img;
-  max-width: 100%;
+.tile h3 code {
+	font-size: 1.9rem;
 }
 
 /* Footer
 ====================== */
 footer {
   background-color: #1c2935;
-  grid-area: footer;
   padding: 2rem;
+}
+
+/*================================
+ MEDIA QUERIES
+==================================*/
+
+@media (max-width: 500px){
+
+  header {
+    background-color: unset;
+  }
+  aside {
+    display: none;
+  }
+
+  /*menu*/
+  ul.main-nav-contenedor {
+  background-color: #1c2935;
+}
+  ul li.menues {
+    float: none;
+  }
+  ul li.menues li {
+    background: #192837;
+  }
+  .show {
+    left: 161px;
+  }
 }

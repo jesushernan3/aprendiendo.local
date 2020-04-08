@@ -1,0 +1,907 @@
+
+/*================================
+ Css LOS ACROBATAS
+==================================*/
+
+@font-face {
+	font-family: 'Univers';
+	src: url("../fonts/Univers/UniversLTStd-Cn.otf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Univers light';
+	src: url("../fonts/Univers/UniversLTStd-Light.otf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+/*=============
+/*====================
+  GLOBALES
+  ====================*/
+  body {
+  	font-family: 'Univers light', 'Trebuchet MS', sans-serif;
+  }
+	a {
+		transition: all 0.2s ease;
+		color: #8b0000;
+		}
+		a:hover, a:focus, .tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-link:hover, #products .highlighted-informations .quick-view:hover, .featured-products .highlighted-informations .quick-view:hover, .product-accessories .highlighted-informations .quick-view:hover, .product-miniature .highlighted-informations .quick-view:hover, .cart-grid-body a.label:hover  {
+			color: #111;
+		}
+	p {
+		color: #333;
+	}
+	.btn-primary {
+		background-color: #D9230F;
+		}
+		.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open > .btn-primary.dropdown-toggle.focus, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle:hover {
+			background-color: #9D0000;
+		}
+		.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+			background-color: #A60000;
+		}
+	.tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-link:hover {
+		border-bottom: 3px solid #D9230F;
+	}
+	.product-price {
+		color: #D9230F;
+	}
+	.custom-radio input[type="radio"]:checked + span {
+		background-color: #D9230F;
+	}
+	.btn-primary.active, .btn-primary:active, .open > .btn-primary.dropdown-toggle {
+		background-color: #A60000;
+	}
+	.card {
+		border-radius: 5px;
+	}
+	#products .product-miniature .discount-amount.on-sale, #products .product-miniature .discount-percentage.on-sale, #products .product-miniature .on-sale.on-sale, #products .product-miniature .online-only.on-sale, #products .product-miniature .pack.on-sale, #products .product-miniature .product-flags .new.on-sale, .featured-products .product-miniature .discount-amount.on-sale, .featured-products .product-miniature .discount-percentage.on-sale, .featured-products .product-miniature .on-sale.on-sale, .featured-products .product-miniature .online-only.on-sale, .featured-products .product-miniature .pack.on-sale, .featured-products .product-miniature .product-flags .new.on-sale, .product-accessories .product-miniature .discount-amount.on-sale, .product-accessories .product-miniature .discount-percentage.on-sale, .product-accessories .product-miniature .on-sale.on-sale, .product-accessories .product-miniature .online-only.on-sale, .product-accessories .product-miniature .pack.on-sale, .product-accessories .product-miniature .product-flags .new.on-sale, .product-miniature .product-miniature .discount-amount.on-sale, .product-miniature .product-miniature .discount-percentage.on-sale, .product-miniature .product-miniature .on-sale.on-sale, .product-miniature .product-miniature .online-only.on-sale, .product-miniature .product-miniature .pack.on-sale, .product-miniature .product-miniature .product-flags .new.on-sale {
+		background: #777;
+	}
+	.page-my-account #content .links a:hover i, .search-widget form button[type="submit"] .search:focus {
+		color: #9D0000;
+	}
+	#main {
+		min-height: 800px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Univers';
+	}
+
+/*====================
+  HEADER
+  ====================*/
+
+	/* Header Top Nav ====================*/
+  #header .header-nav {
+  	margin-bottom: unset;
+  	border-bottom: unset;
+  	background-color: #000000;
+  	height: 35px;
+  	}
+	  #header .header-nav .user-info a, #header .header-nav .blockcart, #header .header-nav .language-selector {
+	  	font-size: 0.8rem;
+	  }
+	  #header .header-nav .cart-preview .shopping-cart, #header .header-nav .material-icons {
+	  	font-size: 1.2rem;
+	  }
+  #header a, .dropdown .expand-more, #header .header-nav .cart-preview .shopping-cart, #header {
+		color: #ccc;
+		}
+	  #header a:hover {
+	  	color: #fff;
+	  }
+  #header .menu > ul > li#lnk-contacto {
+		display: none;
+	}
+	nav.header-nav .material-icons.expand-more {
+		display: none; /* oculta ico flechita al lado derecho de la palabra*/
+	}
+
+	/*Iniciar sesion ====================*/
+  #header .header-nav .user-info {
+  	margin-left: 0;
+  	text-align: left;
+  	margin-top: unset;
+  	padding-top: .35rem;
+  }
+  .user-info .material-icons {
+  	display: none;
+  }
+  .user-info .account {
+		border-left: 3px solid #555;
+		padding-left: 15px;
+	}
+  
+  /*Icono Cart ====================*/
+  #header .header-nav .blockcart {
+		height: unset; 
+		padding: 0rem;
+		margin-left: unset;
+		background: none;
+		padding-top: 0.25rem;
+	}
+	#header .header-nav .cart-preview.active {
+		background: unset;
+	}
+	
+	/*Selector de idioma ====================*/
+	#header .header-nav .language-selector {
+		margin-top: unset;
+		padding-top: .35rem;
+		margin-right: 10px;
+	}
+	.dropdown:hover .expand-more {
+		color: #fff;
+	}
+	#_desktop_language_selector .dropdown-menu {
+		background: #333;
+		left: unset;
+		right: 0;
+		min-width: 7rem;
+		top: 122%;
+		box-shadow: 10px 10px 9px -6px rgba(1,1,1,0.2);
+	}
+
+	/*Selector de moneda ====================*/
+	#_desktop_currency_selector .dropdown-menu {
+		background: #333;
+		margin-top: 9px;
+	}
+	#header .header-nav .currency-selector {
+		margin-top: 5px;
+		padding-left: 25px;
+		border-left: 3px solid #555;
+	}
+	#currency-selector-label {
+		color: #ccc;
+		font-size: 0.8rem;
+	}
+	#_desktop_currency_selector .expand-more._gray-darker {
+		display: none;
+	}
+
+	/*Informacion de contacto -====================*/
+	#header .header-nav .col-md-7.links {
+		display: none;
+	}
+
+	/*Slider ====================*/
+	.carousel {
+		margin-bottom: 3rem;
+	}
+	.carousel .carousel-item .caption h2, .carousel .carousel-item .caption .caption-description p {
+		color: #222;
+	}
+	.carousel .carousel-item .caption {
+    bottom: 120px;
+    left: 300px;
+	}
+
+
+  /*Header Main Nav ====================*/
+  #header .header-top {
+		padding-top: 0;
+		padding-bottom:0;
+		background-color: #fff;
+  }
+  .header-top > .container > .row {
+		display: flex;
+	}
+  .col-md-10.col-sm-12.position-static {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	#header .header-top .menu {
+		 padding-left: unset; 
+		 margin-bottom: unset; 
+	}
+	#top-menu {
+		margin-bottom: unset;
+	}
+	#header .header-top a.dropdown-item {
+		color: #333;
+		font-size: 1.8rem;
+		font-weight: normal;
+	}
+	#header .top-menu a[data-depth="0"]:hover {
+		color: darkred;
+	}
+	.top-menu a[data-depth="0"] {
+		font-family: 'Univers';
+	}
+	#lnk-inicio {
+		padding-right: 3.3rem;
+	}
+	
+
+/*====================
+  FOOTER
+  ====================*/
+  footer#footer {
+  	background-color: #303030;
+  }
+  #footer p {
+  	color: #ccc;
+  }
+  footer hr {
+		border-top: 1px dotted rgba(255,255,255,0.1);
+	}
+	.footer-container {
+		margin-top: 2.25rem;
+		box-shadow: 2px 0px 1px 0 rgba(0,0,0,.3);
+	}
+	.footer-container li a:hover {
+		color: #D9230F;
+	}
+	/*...::: footer Bloque Links Mi Cuenta :::...*/
+	#footer .h3, #block_myaccount_infos .myaccount-title a {
+		color: #ccc;
+		font-weight: 400;
+		font-family: 'Univers';
+	}
+	#footer .block-contact-title, #footer .blockcms-title, #footer .myaccount-title, #footer .myaccount-title a {
+		font-size: 1.125rem;
+		font-weight: 400;
+
+	}
+	#footer .text-sm-center a {
+		color: #7a7a7a;
+	}
+	.footer-container li a {
+		font-size: 0.975rem;
+		letter-spacing: .04rem;
+	}
+	/*...::: footer Gancho Antes :::...*/
+	#footer > .container > .row > .col-md-12 {
+		text-align: center;
+	}
+		.search-widget form input[type="text"]:focus {
+		outline: 3px solid #333;
+		color: #232323;
+		background: #fff;
+	}
+	/*...::: footer Bloque Social :::...*/
+		#footer .block-social {
+		text-align: right;
+	}
+	#footer .block-social li {
+		height: 2rem;
+		width: 2rem;
+		background-color: #3A3A3A;
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin: .125rem;
+		cursor: pointer;
+		background-size: contain;
+	}
+	#footer .block-social li:hover {
+		background-color: #9D0000;
+	}
+/*====================
+  THUMBS PRODUCTOS
+  ====================*/
+  #products .product-description, .featured-products .product-description, .product-accessories .product-description, .product-miniature .product-description, #products .thumbnail-container, .featured-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container {
+  	border-radius: 5px;
+	
+}
+  
+  #products .product-description, .featured-products .product-description, .product-accessories .product-description, .product-miniature .product-description {
+	min-height:113px;
+
+  }
+  #products .thumbnail-container, .featured-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container { 
+	min-height: 370px;	
+} 
+
+  #products .thumbnail-container:hover, .featured-products .thumbnail-container:hover, .product-accessories .thumbnail-container:hover, .product-miniature .thumbnail-container:hover {
+		box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.8);
+	}
+	#products .product-price-and-shipping, .featured-products .product-price-and-shipping, .product-accessories .product-price-and-shipping, .product-miniature .product-price-and-shipping {
+		font-weight: initial; 
+	}
+	#products .product-miniature .discount-amount, #products .product-miniature .discount-percentage, #products .product-miniature .on-sale, #products .product-miniature .online-only, #products .product-miniature .pack, #products .product-miniature .product-flags .new, .featured-products .product-miniature .discount-amount, .featured-products .product-miniature .discount-percentage, .featured-products .product-miniature .on-sale, .featured-products .product-miniature .online-only, .featured-products .product-miniature .pack, .featured-products .product-miniature .product-flags .new, .product-accessories .product-miniature .discount-amount, .product-accessories .product-miniature .discount-percentage, .product-accessories .product-miniature .on-sale, .product-accessories .product-miniature .online-only, .product-accessories .product-miniature .pack, .product-accessories .product-miniature .product-flags .new, .product-miniature .product-miniature .discount-amount, .product-miniature .product-miniature .discount-percentage, .product-miniature .product-miniature .on-sale, .product-miniature .product-miniature .online-only, .product-miniature .product-miniature .pack, .product-miniature .product-miniature .product-flags .new {
+		background-color: #D9230F;
+	}
+	#products .product-title, .featured-products .product-title, .product-accessories .product-title, .product-miniature .product-title, #products .product-price-and-shipping, .featured-products .product-price-and-shipping, .product-accessories .product-price-and-shipping, .product-miniature .product-price-and-shipping {
+		text-align: left;
+		padding-left: 1rem;
+		color: #111;
+	}
+	#products .product-title a, .featured-products .product-title a, .product-accessories .product-title a, .product-miniature .product-title a {
+		color: #111;
+		font-size: 0.975rem;
+		font-weight: bold;
+		l		etter-spacing: 0.8px;
+	}
+
+
+  
+/*====================
+  vista INICIO
+	====================*/
+	#index #wrapper {
+		padding-top: unset;
+		background: #fff;
+	}
+	#index #wrapper > .container {
+		padding: 0;
+		width: 100%;
+	}
+	#index .featured-products {
+		width: 1124px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+/*====================
+  vista PRODCUTO
+  ====================*/
+  li.product-flag {
+  	background-color: #D9230F;
+  }
+  #product h1 {
+  	font-size: 1.6rem;
+  	margin-bottom: unset;
+  	font-weight: normal;
+  }
+  #product .product-price {
+  	color: #555;
+  	font-size: 1.5rem;
+  }
+  #product .product-price.h5 {
+  	margin-top: 0.6rem;
+  	font-weight: normal;
+  }
+  #product .product-prices {
+		margin-top: 0rem;
+	}
+  #product #block-reassurance span {
+  	font-weight: unset;
+  }
+  #product .tabs {
+		box-shadow: unset; 
+		background: unset; 
+		padding: unset; 
+		min-height: 12rem;
+		margin-bottom: 50px;
+	}
+	#product .nav-tabs .nav-link.active, #product .nav-tabs .nav-link.active:focus {
+		background: unset;
+	}
+	.product-images > li.thumb-container > .thumb.selected, .product-images > li.thumb-container > .thumb:hover {
+		border: 3px solid #D9230F;
+	}
+	#product #block-reassurance {
+		box-shadow: unset; 
+		background: unset; 
+	}
+	#product #block-reassurance li .block-reassurance-item {
+		padding: 1rem 0;
+	}
+	#product .product-quantity {
+		display: block;
+		margin-bottom: unset;
+		width: 70%;
+	}
+	#product .product-quantity .clearfix {
+		clear: unset;
+	}
+	#product .product-information {
+		margin-bottom: 3rem;
+	}
+	/*...::: disponibilidad de producto :::...*/
+	#product-availability .product-last-items, #product-availability .product-unavailable {
+		margin-right: 5px;
+	}
+	#product-availability {
+		margin-top: unset;
+		padding-left: 10px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		float: left;
+	}
+	#product #product-availability {
+		margin-bottom: 30px;
+	}
+	/*...::: Social Sharing :::...*/
+	.social-sharing li {
+		box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		display: inline-block;
+		background-color: #fff;
+		background-repeat: no-repeat;
+		background-size: 1.5rem 1.5rem;
+		background-position: .25rem .25rem;
+		cursor: pointer;
+		margin-left: .5rem;
+	}
+  /*--- variante producto ---*/
+  #product .product-actions .control-label {
+  	font-size: 1.3rem;
+  }
+  #product .radio-label {
+  	font-weight: 400;
+  }
+  #product .input-color:checked + span, #product .input-color:hover + span, #product .input-radio:checked + span, #product .input-radio:hover + span {
+  	font-weight: 800;
+  }
+  #product .tabs .nav-tabs .nav-link.active {
+	color: darkred;
+  }
+
+/*====================
+  vista CATEGORIA
+  ====================*/
+	.block-categories {
+		font-family: 'Univers';
+	}
+	.category-top-menu .text-uppercase.h6 {
+		font-size: 1.2rem;
+	}
+/*====================
+  vista CONTACT
+  ====================*/
+
+/*====================
+  vista SEARCH
+  ====================*/
+
+/*====================
+  vista CHECKOUT
+  ====================*/
+  #checkout img {
+		width: 100%;
+	}
+	body#checkout #header .header-nav {
+		box-shadow: none;
+		background-color: unset;
+		height: unset;
+	}
+	body#checkout #header .header-nav .user-info a {
+		font-size: 1.2rem;
+		color: #333;
+	}
+	/*Header ------*/
+  body#checkout #header .header-nav {
+  	padding: .5rem 1rem;
+  }
+  body#checkout #header .header-nav .user-info {
+  	text-align: right;
+  	padding-top: 1.35rem;
+  }
+  body#checkout a:hover {
+		color: #9D0000;
+	}
+	body#checkout section.checkout-step .address-item.selected {
+		border: 3px solid #D9230F;
+	}
+	body#checkout #checkout-personal-information-step .my-2 {
+		margin-bottom: 2rem !important;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	body#checkout #checkout-guest-form #customer-form p:only-of-type {
+		margin-top: 3rem;
+	}
+
+  /* Ocultar Campos de los pasos para realizar pedido sección: DATOS PERSONALES ------*/
+  #checkout-personal-information-step #checkout-guest-form #customer-form .form-group:nth-child(2), 
+  /*#checkout-personal-information-step #checkout-guest-form #customer-form .form-group:nth-child(8),*/
+  #checkout-personal-information-step #checkout-guest-form #customer-form .form-group:nth-child(9) {
+		display: none;
+	}
+	/* Ocultar Campos de los pasos para realizar pedido sección: METODO DE ENVIO ------*/
+	body#checkout #delivery {
+		display: none;
+	}
+
+	/*Confirmacion de Orden ------*/
+	#order-items .order-line {
+		border-bottom: 1px dotted #ccc;
+	}
+
+/*====================
+  vista MI CUENTA
+  ====================*/
+  #content #order-slips-link {
+		display: none;
+	}
+
+	/*nueva direccion ------*/
+	#address .form-fields .form-group.row:nth-child(5) /*borrar campo Alias*/ {
+		display: none;
+	}
+
+
+/*====================
+	vista CMS
+	====================*/
+	#cms #wrapper .breadcrumb {
+		margin-bottom: 3rem;
+	}
+	#cms h1 {	
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+	#cms h2:not(:first-child) {
+		margin-top: 2rem;
+	}
+	#cms #content li {
+		padding-left: 1.7rem;
+		padding-bottom: 0.5rem;
+	}
+
+
+  /*...::: Header :::...*/
+  body#checkout #header .header-nav {
+  	padding: .5rem 1rem;
+  }
+  body#checkout #header .header-nav .user-info {
+  	text-align: right;
+  	padding-top: .75rem;
+  }
+  body#checkout a:hover {
+		color: #9D0000;
+	}
+	body#checkout section.checkout-step .address-item.selected {
+		border: 3px solid #D9230F;
+	}
+  /*...::: Ocultar Campos de los pasos para realizar pedido :::...*/
+
+/*  
+		¡¡¡ESTA GENERANDO PROBLEMAS EN EL CHECKOUT DE PRODUCCION!!!
+#checkout-addresses-step .form-fields .form-group:nth-child(7), #checkout-addresses-step .form-fields .form-group:nth-child(8), #checkout-addresses-step .form-fields .form-group:nth-child(10), #checkout-addresses-step .form-fields .form-group:nth-child(11) .form-control-comment, #checkout-addresses-step .form-fields .form-group:nth-child(17), .my-2 .nav-item, #delivery label, #delivery_message, #customer-form .form-group:nth-child(2), #customer-form .form-group:nth-child(7), #customer-form .form-group:nth-child(8), #customer-form .form-group:nth-child(9), #customer-form p:only-of-type {
+		display: none;
+	}*/
+	/*...::: Confirmacion de Orden :::...*/
+	#order-items .order-line {
+		border-bottom: 1px dotted #ccc;
+	}
+
+	/*tablas en cms ==========*/
+	#cms th:first-child {
+		padding-left: 10px;
+	}
+	#cms th {
+		background-color: #cf5454;
+		color: #ddd;
+		font-size: 18px;
+		line-height: 1.4;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		border-spacing: 33px;
+	}
+	#cms td {
+		color: #808080;
+		height: 3rem;
+		padding: 5px 10px;
+		text-align: left;
+	}
+
+	#cms table tbody tr:nth-child(2n) {
+		background: #f8f6ff;
+	}
+	#cms #content h2 {
+		background: #cf5454;
+		color: #ddd;
+		padding: .5rem;
+		text-transform: uppercase;
+		margin-bottom: 0.1rem;
+	}
+
+
+/*====================
+  vista: USUARIO
+  ====================*/
+  .form-control:focus, .input-group.focus {
+		outline: .1875rem solid #333;
+	}
+	.form-control:focus {
+		border-color: #333;
+	}
+/*====================
+  vista: Modal
+  ====================*/
+  #blockcart-modal .modal-header {
+  	background: #D9230F;
+  }
+  #blockcart-modal .product-name {
+		color: #D9230F;
+	}
+	#blockcart-modal .modal-title i.material-icons {
+		margin-right: 0.375rem;
+		float: left;
+		height: 35px;
+	}
+	#blockcart-modal .product-image {
+		max-width: 8.63rem;
+	}
+/*====================
+  vista: Rapida Modal
+  ====================*/
+  .product-quantity {
+  	display: block;
+  }
+  
+
+/* ULTIMOS CAMBIOS */
+#products .thumbnail-container:focus .highlighted-informations.no-variants, #products .thumbnail-container:hover .highlighted-informations.no-variants, .featured-products .thumbnail-container:focus .highlighted-informations.no-variants, .featured-products .thumbnail-container:hover .highlighted-informations.no-variants, .product-accessories .thumbnail-container:focus .highlighted-informations.no-variants, .product-accessories .thumbnail-container:hover .highlighted-informations.no-variants, .product-miniature .thumbnail-container:focus .highlighted-informations.no-variants, .product-miniature .thumbnail-container:hover .highlighted-informations.no-variants { 
+	bottom: 7.1rem;
+}
+
+#products img, .featured-products img, .product-accessories img, .product-miniature img {  
+	margin-left: unset;
+	width: 100%;
+}
+
+
+
+/*::::::::::::::: Media Query a 768 ::::::::::::::: */
+
+@media (max-width: 768px) {
+
+	/*====================
+  Header(768)
+  ====================*/
+	#header .header-nav {
+		height: unset;
+		background-color: #fff;
+	}
+	#_mobile_cart {
+		margin-right: 1rem;
+		line-height: 30px
+	}
+	#header .header-nav .cart-preview .shopping-cart, #header .header-nav .material-icons {
+		font-size: 1.8rem;
+	}
+	#header .header-nav .cart-preview .shopping-cart, #header {
+		color: #111;
+	}
+	.carousel {
+		min-height: 300px;
+		margin-bottom: 4.5rem;
+	}
+	.user-info .account {
+		border-left: unset;
+	}
+	#header .header-nav .cart-preview.active a, #header .header-nav .cart-preview.active i {
+		color: #000;
+	}
+	#header a:hover {
+		color: #9D0000;
+	}
+
+	/*=== menu nav ===*/
+	#header .header-top a.dropdown-item {
+		font-size: 1.2rem;
+	}
+	#mobile_top_menu_wrapper {
+		display: block;
+	}
+	#mobile_top_menu_wrapper .js-top-menu-bottom .user-info a {
+		display: inline-block;
+		width: 40%;
+	}
+	#mobile_top_menu_wrapper .top-menu a[data-depth="0"] {
+		padding: 1rem 0.625rem;
+		border-bottom: none;
+	}
+	#top-menu li:last-child {
+		border-top: 1px solid #aaa;
+	}
+	#top-menu li:last-child a.dropdown-item {
+		font-size: 1rem;
+	}
+	#top-menu li:first-child {
+		border-bottom: 1px solid #aaa;
+	}
+	#top-menu li:first-child a.dropdown-item {
+		font-size: 1.6rem;
+	}
+	#currency-selector-label, #language-selector-label, #mobile_top_menu_wrapper .js-top-menu-bottom a {
+		color: #555;
+	}
+
+	#mobile_top_menu_wrapper .js-top-menu-bottom .user-info {
+		padding: .625rem;
+	}
+	#mobile_top_menu_wrapper .js-top-menu-bottom .user-info a {
+		padding: 0;
+	}
+	#mobile_top_menu_wrapper .js-top-menu-bottom .user-info a.account {
+		border-left: 1px dotted #D90000;
+		padding-left: 40px;
+	}
+
+	/*====================
+	  Contenido(768)
+	  ====================*/
+	  
+	#index #wrapper > .container {
+		padding-left: unset;
+		padding-right: unset;
+  	}
+  	#custom-text h3 {
+		font-size: 1.3rem;
+		margin-bottom: 2rem;
+	}
+	#custom-text p {
+		text-align: left;
+	}
+	.featured-products .all-product-link {
+		margin-left: 1rem;
+	}
+	.form-control-label  {
+		font-size: 1.175rem;
+	}
+
+	/*=== Slider ===*/
+	.carousel .carousel-item .caption h2 {
+		font-size: 1.3rem;
+	}
+	.carousel .carousel-item img {
+		max-width: unset;
+		object-position:-200px 0;
+	}
+
+	/*=== vista Producto(768) ===*/
+	#product .product-price {
+		font-size: 1.4rem;
+	}
+	#product .tabs {
+		background: #e5e5e5;
+		padding: 0.5rem;
+		margin-bottom: 1.8rem;
+	}
+	#product .tabs .nav-tabs {
+		border-bottom: 2px solid #e5e5e5;
+	}
+	#product .product-information p {
+		color: #333;
+	}
+	#product .tabs .nav-tabs .nav-link {
+		font-size: 1rem;
+	}
+	#product .product-price.h5, .product-prices div {
+		margin-bottom: unset;
+	}
+	#product .product-quantity .qty {
+		margin-bottom: 1.2rem;
+	}
+	/*====================
+	  mobile Checkout(768)
+	  ====================*/
+	#checkout #header {
+		background: #fff;
+	}
+	#checkout #_mobile_user_info {
+		display: none;
+	}
+	.cart-summary-totals, .cart-summary-totals .label {
+		font-weight: 800;
+		font-size: 1.1rem;
+	}
+	  
+	/*====================
+  mobile CMS(768)
+  ====================*/
+
+	#cms h1 {	
+		font-size: 2rem;
+	}
+	#cms h2:not(:first-child) {
+		margin-top: 2rem;
+	}
+	#cms #content li {
+		padding-left: 0rem;
+		}
+		#cms #content li ul li {
+			padding-left: 1.5rem;
+		}
+	.page-content.page-cms {
+		padding: 0.75rem;
+	}
+
+	/*====================
+	  Footer(768)
+	  ====================*/
+	  .links .title {
+	  	border-bottom: none;
+	  }
+	  .links .title:hover, .links .title:active, .links .title:focus {
+	  	background-color: #333;
+	  }
+	  .footer-container .links ul {
+	  	background-color: #333;
+	  }
+	  .footer-container .links ul > li {
+	  	border-bottom:none;
+	  	padding: unset;
+	  	padding-left: 0.8rem;
+	  }
+	  .footer-container .links ul > li a {
+	  	color: #ccc;
+	  	display: block;
+	  	font-weight: 400;
+	  	padding: .625rem;
+	  }
+	  .footer-container .links ul > li a:hover {
+	  	color: darkred;
+	  }
+	  .footer-container .links ul > li:hover {
+	  	background-color: #222;
+	  }
+	  #block_myaccount_infos {
+			margin-bottom: 3rem;
+		}
+		#footer .block-social {
+			text-align: center;
+		}
+		footer#footer {
+			padding-top: 2rem;
+		}
+		.footer-container .links ul > li:last-child {
+			margin-bottom: 25px;
+		}
+	  #footer p.text-sm-center {
+	  	text-align: center;
+	  }
+
+}
+
+
+
+/*::::::::::::::: Media Query a 470 ::::::::::::::: */
+
+@media (max-width: 470px) {
+
+	/*====================
+  Header(470px)
+  ====================*/
+	#header .header-nav {
+		height: unset;
+	}
+	.featured-products .thumbnail-container,  .featured-products .product-description {
+		width: 210px;
+	}
+	.featured-products .thumbnail-container {
+		min-height: 323px;
+	}
+
+	
+
+	/*====================
+	  Contenido(470)
+	  ====================*/
+
+	  #product .tabs .nav-tabs .nav-link {
+	  	font-size: .9rem;
+	  }
+	  #footer .text-sm-center {
+			font-size: 0.825rem;
+			text-align: center;
+		}
+		/*Slider(470)====================*/
+		.carousel .carousel-item img {
+			max-width: unset;
+			object-position:-350px 0;
+		}
+
+}
+
+
+
+
+/*==================================
+
+	Colores:
+	• Primario: #D9230F (rojo)
+	• Secundario: #2fb5d2 (celeste)
+	• Terceario: #9D0000 (rojo oscuro)
+
+	==================================*/
