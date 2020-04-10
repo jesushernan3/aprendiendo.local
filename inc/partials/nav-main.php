@@ -1,20 +1,14 @@
 <nav id="main-nav" class="navbar container" role="navigation">
 
+	
 	<div class="navbar-brand">
-    <a class="navbar-item" href="/">Aprendiendo</a>
+    <a class="navbar-item" href="/"><em>APRENDIENDO</em></a>
 	</div>
 	
 	<div class="navbar-menu">
 		<div class="navbar-start nav-list">
 
-			<div class="navbar-item has-dropdown is-hoverable">
-				<a href="#" class="navbar-link is-arrowless">HTML</a>
-				<div class="navbar-dropdown nav-dropdown">
-					<a class="navbar-item" href="#">submenu 1</a>
-					<a class="navbar-item" href="#">submenu 2</a>
-					<a class="navbar-item" href="#">submenu 3</a>
-				</div>
-			</div>		
+			<a href="#" class="navbar-item">HTML</a>
 		
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a href="#" class="navbar-link is-arrowless">CSS</a>
@@ -107,9 +101,8 @@
 		</div>
 
 		<div class="navbar-end">
-			<div class="nav-mobile">
-        <a id="nav-toggle" href="#!"><span></span></a>
-      </div>
+			
+			
 		 <!-- <li class="nabvar-item">
 				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 					<span aria-hidden="true"></span>
@@ -119,4 +112,8 @@
 			</li>  -->
 		</div class="navbar-end"
 	</div>
+	
 </nav>
+<div class="nav-mobile">
+				<a id="nav-toggle" href="#!"><span></span></a>
+			</div>	

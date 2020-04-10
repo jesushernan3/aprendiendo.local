@@ -13,7 +13,6 @@ body, body#index {
   color: antiquewhite;
 
 } 
-
 a {
   color: #7fffd4;
 }
@@ -35,7 +34,6 @@ h3 {font-size: 1.9rem;}
 h4 {font-size: 1.8rem;}
 h5 {font-size: 1.7rem;}
 h6 {font-size: 1.6rem;}
-
 
 .standard-table {
   font-size: 1.2rem;
@@ -76,12 +74,18 @@ header {
   ====================*/
 
 /* Menu Principal 
-  ====================== */
+====================== */
+
+  /* 
+   * OVERRIDE Bulma 
+   */
+
 #main-nav {
-  /* override bulma */
   background-color: unset;
 }
-
+.navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
+	display: none;
+}
 .navbar-dropdown {
   background: #1c2935;
 }
@@ -95,12 +99,22 @@ header {
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
 	color: unset;
 }
+
+nav div div {
+  position: relative;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
 /* mobile nav */
 .nav-mobile {
   display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
+  /* position: absolute; */
+  justify-content: center;
+  align-items: center;
   background: #262626;
   height: 70px;
   width: 70px;
@@ -110,15 +124,13 @@ nav .has-dropdown a:visited:not(:only-child):after {
   padding-left: 4px;
   content: ' ▾';
 }
-.nav-dropdown {
-  position: static;
-}
+
 
 /* desde funcion js para menu mobile */
 #nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
+  /* position: absolute; */
+  /* left: 18px; */
+  /* top: 22px; */
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
@@ -298,7 +310,7 @@ footer {
   /*menu*/
   ul.main-nav-contenedor {
   background-color: #1c2935;
-}
+  }
   ul li.menues {
     float: none;
   }
@@ -310,6 +322,10 @@ footer {
   }
   /* menu mobile */
   .nav-mobile {
-    display: block;
+    display: flex;
+  }
+  /* desde menu mobile */
+  .nav-dropdown {
+    position: static;
   }
 }
