@@ -1,108 +1,122 @@
-<nav id="main-nav" class="navbar container">
-	<ul class="main-nav-contenedor">
-	<li class="menu">
-		<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-		  <span aria-hidden="true"></span>
-		  <span aria-hidden="true"></span>
-		  <span aria-hidden="true"></span>
-		</a>
-	</li>
-	<li class="menues">
-			<a href="#" class="dropDown">HTML</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>		
-		
-		<li class="menues">
-			<a href="#" class="dropDown">CSS</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">JS</a>
-			<ul>
-				<li><a href="#">JavaScript Base</a>
-					<ul>
-						<li><a href="/views/sintaxys-reglas-js.php">Sintaxys & Reglas</a></li>
-						<li><a href="/views/variables-js.php">Variables</a></li>
-						<li><a href="/views/tipos-js.php">Tipos</a></li>
-						<li><a href="#">prueba 3</a></li>
-					</ul>
-			</li>
-				<li><a href="/views/comentar-js.php">Comentar prueba largo</a></li>
-				<li><a href="/views/operadores-js.php">Operadores</a></li>
-				<li><a href="/views/webpack-js.php">Webpack</a></li>
-				<li><a href="#">submenu 4</a></li>
-				<li><a href="#">submenu 5</a></li>
-			</ul>
-		</li>
-		
-		<li class="menues">
-			<a href="#" class="dropDown">Php</a>
-			<ul>
-				<li><a href="#">Apache</a>
-					<ul>
-						<li><a href="/views/vistas-php/htaccess-view.php">Htacces</a></li>
-					</ul>
-				</li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">Frameworks</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">Librerias</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">Conceptos</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">Snippets</a>
-			<ul>
-				<li><a href="#">submenu 1</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">React JS</a>
-			<ul>
-				<li><a href="/views/react.intro-lb.php">Intro</a></li>
-				<li><a href="/views/react.install-lb.php">Instalación</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
-		<li class="menues">
-			<a href="#" class="dropDown">Notas</a>
-			<ul>
-				<li><a href="/views/pre.tag-notas.php">Pre tag</a></li>
-				<li><a href="#">submenu 2</a></li>
-				<li><a href="#">submenu 3</a></li>
-			</ul>
-		</li>
+<nav id="main-nav" class="navbar container" role="navigation">
 
-	</ul>
+	<div class="navbar-brand">
+    <a class="navbar-item" href="/">Aprendiendo</a>
+	</div>
+	
+	<div class="navbar-menu">
+		<div class="navbar-start nav-list">
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">HTML</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+		
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">CSS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>	
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">JS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<div class="navbar-item" href="">JavaScript Base</div>
+					<a class="navbar-item" href="/views/sintaxys-reglas-js.php">Sintaxys & Reglas</a>
+					<a class="navbar-item" href="/views/variables-js.php">Variables</a>
+					<a class="navbar-item" href="/views/tipos-js.php">Tipos</a>
+					<a class="navbar-item" href="#">prueba 3</a>
+					<a class="navbar-item" href="/views/comentar-js.php">Comentar prueba largo</a>
+					<a class="navbar-item" href="/views/operadores-js.php">Operadores</a>
+					<a class="navbar-item" href="/views/webpack-js.php">Webpack</a>
+					<a class="navbar-item" href="#">submenu 4</a>
+					<a class="navbar-item" href="#">submenu 5</a>
+				</div>
+			</div>
+			
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">PHP</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">FRAMEWORKS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+			
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">LIBRERIAS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">CONCEPTOS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">SNIPPETS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#" class="navbar-link is-arrowless">REACT JS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>		
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a href="#!" class="navbar-link is-arrowless">NOTAS</a>
+				<div class="navbar-dropdown nav-dropdown">
+					<a class="navbar-item" href="#">submenu 1</a>
+					<a class="navbar-item" href="#">submenu 2</a>
+					<a class="navbar-item" href="#">submenu 3</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="navbar-end">
+			<div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+		 <!-- <li class="nabvar-item">
+				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</li>  -->
+		</div class="navbar-end"
+	</div>
 </nav>

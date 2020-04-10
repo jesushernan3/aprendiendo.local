@@ -79,46 +79,79 @@ header {
   ====================== */
 #main-nav {
   /* override bulma */
-  display: flex;
   background-color: unset;
 }
-ul li.menues {
-  float: left;
-  min-width: 110px;
-  line-height: 3em;
-  text-align: center;
-  cursor: pointer;
-}
-ul li.menues li {
+
+.navbar-dropdown {
   background: #1c2935;
 }
-ul li.menues a {
-  display: block;
-  padding: 0 1.5rem;
+.navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
+  color: #ccc;
+  background-color: unset;
 }
-ul li a:hover {
+.navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: #03383f;
 }
-ul li ul {
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
+	color: unset;
+}
+/* mobile nav */
+.nav-mobile {
   display: none;
-}
-.show li:hover ul {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	width: 100%;
-}
-.show {
-  display: block;
   position: absolute;
-  border-top: 1px solid #03383f;
-}
-.show a {
-  font-size: 1.3rem;
-}
-ul .menues:last-child .show {
+  top: 0;
   right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+nav .has-dropdown a:not(:only-child):after,
+nav .has-dropdown a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+.nav-dropdown {
+  position: static;
+}
+
+/* desde funcion js para menu mobile */
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 
 /* Menu aside 
@@ -274,5 +307,9 @@ footer {
   }
   .show {
     left: 161px;
+  }
+  /* menu mobile */
+  .nav-mobile {
+    display: block;
   }
 }
