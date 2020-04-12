@@ -101,7 +101,7 @@ nav {
   height: 70px;
   display: flex;
   justify-content: center;
-  
+  background-color: darkslategray;
 }
 nav ul {
   list-style: none;
@@ -117,7 +117,7 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: darkslategray;
   color: #ffffff;
   text-decoration: none;
 }
@@ -150,7 +150,6 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #262626;
   height: 70px;
   width: 70px;
 }
@@ -177,6 +176,7 @@ main.bd-main {
   overflow: hidden;
   flex-grow: 1;
   flex-shrink: 1;
+  position: relative;
 }
 main li {
   font-size: 1.3rem;
@@ -353,6 +353,8 @@ footer {
   }
   nav ul {
     display: none;
+    position: relative;
+    z-index: 100;
   }
   nav ul li {
     float: none;

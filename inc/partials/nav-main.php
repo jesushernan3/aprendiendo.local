@@ -6,11 +6,17 @@
         <a id="nav-toggle" href="#!"><span></span></a>
       </div>
       <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Web Development</a>
+        <li><a href="#">Html</a></li>
+        <li><a href="#">Js</a>
           <ul class="nav-dropdown">
-            <li><a href="#">HTML</a></li>
+            <li><a href="<?php echo $raiz; ?>views/comentar-js.php">Comentar</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Php</a>
+          <ul class="nav-dropdown">
+            <li><a href="<?php echo $raiz; ?>views/vistas-php/php-variables.php">Variables</a></li>
             <li><a href="#">CSS</a></li>
             <li><a href="#">JavaScript</a></li>
           </ul>

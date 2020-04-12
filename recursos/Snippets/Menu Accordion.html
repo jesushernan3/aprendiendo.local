@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/pruebas.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-family: Verdana;
+        text-decoration: none;
+      }
+      body {
+        background-color: #bbb;
+      }
+      header, main, footer {
+        background-color: #ddd;
+        margin:10px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      header {
+        text-align: center;
+      }
+      main {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      footer {
+
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        margin: 0 auto;
+      }
+      nav li {
+
+      }
+
+      /*Accordion ------*/
+      button.accordion {
+        width: 100%;
+        background-color: whitesmoke;
+        border: none;
+        outline: none;
+        text-align: left;
+        padding: 15px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.2s linear;
+      }
+      button.accordion:hover, button.accordion.is-open {
+        background-color: #ddd;
+      }
+      button.accordion:after {
+        content: '\f055';
+        font-family: "fontawesome";
+        font-size: 14px;
+        float: right;
+      }
+      button.accordion.is-open:after {
+        content: '\f056';
+      }
+      .accordion-content {
+        padding: 0 20px;
+        border-left: 1px solid whitesmoke;
+        border-radius: 1px solid whitesmoke;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+    <h2>Menu accordion</h2>
+      <nav>
+        <ul>
+          <li><a href="#">1 menu</a></li>
+          <li><a href="#">2 menu</a></li>
+          <li><a href="#">3 menu</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Accordions</h1>
+
+        <button class="accordion">Accordian #1</button>
+        <div class="accordion-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
+          </p>
+        </div>
+
+
+        <button class="accordion">Accordian #2</button>
+        <div class="accordion-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
+          </p>
+        </div>
+
+
+        <button class="accordion">Accordian #3</button>
+        <div class="accordion-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
+          </p>
+        </div>
+      </div>
+  <!-- contend ends here -->
+  
+    </main>
+
+    <footer>
+      Footer
+    </footer>
+
+    <script>
+      var accordions = document.getElementsByClassName("accordion");
+
+      for (var i = 0; i < accordions.length; i++) {
+        accordions[i].onclick = function () {
+          this.classList.toggle('is-open');
+
+          let content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            // accordion is open, we need to close it
+            content.style.maxHeight = null;
+          } else {
+            // accordion is closed
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        }
+      }
+    </script>
+      
+    </script>
+  </body>
+</html>
