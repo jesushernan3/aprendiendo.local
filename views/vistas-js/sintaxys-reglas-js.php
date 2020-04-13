@@ -1,6 +1,6 @@
 <?php
-$raiz = "../";
-include_once('../php/funciones-comunes.php');
+$raiz = "../../";
+include_once('../../php/funciones-comunes.php');
 $titulo_pagina = 'sintaxis y reglas';
 include($raiz . 'inc/head.php');
 ?>
