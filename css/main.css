@@ -7,12 +7,12 @@
 
 /* Generales
 ====================== */
-body, body#index {
+body,
+body#index {
   background-color: #2b3e50;
   font-family: "Abel";
   color: antiquewhite;
-
-} 
+}
 a {
   color: #7fffd4;
 }
@@ -21,6 +21,7 @@ a:visited {
 }
 p {
   font-size: 1.5rem;
+  letter-spacing: 0.5px;
 }
 hr {
   margin-top: 21px;
@@ -28,12 +29,24 @@ hr {
   border: 0;
   border-top: 1px solid #596a7b;
 }
-h1 {font-size: 3rem;}
-h2 {font-size: 2rem;}
-h3 {font-size: 1.9rem;}
-h4 {font-size: 1.8rem;}
-h5 {font-size: 1.7rem;}
-h6 {font-size: 1.6rem;}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.9rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.7rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
 
 .standard-table {
   font-size: 1.2rem;
@@ -55,12 +68,11 @@ h6 {font-size: 1.6rem;}
   font-weight: 700;
 }
 .card {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .title {
   color: unset;
 }
-
 
 /* Header
 ====================== */
@@ -84,7 +96,7 @@ header {
   font-size: 1.4em;
 }
 .brand a img {
-	max-height: 70px;
+  max-height: 70px;
 }
 .brand a,
 .brand a:visited {
@@ -141,7 +153,15 @@ nav ul li ul li a {
   padding: 15px;
   line-height: 20px;
 }
-
+nav ul li ul {
+  left: 100px;
+}
+.nav-submenu {
+  left: 100px;
+}
+.nueva {
+  color: red;
+}
 .nav-dropdown {
   position: absolute;
   display: none;
@@ -158,38 +178,6 @@ nav ul.nav-dropdown li a {
   right: 0;
   height: 70px;
   width: 70px;
-}
-
-
-/* CONTENIDO ASIDE 
-==================== */
-.barra-lateral {
-  display: block;
-  flex: 0 0 calc(15rem + 1.5rem);
-  background-color: darkslategray;
-}
-.barra-lateral p {
-  font-size: 1.2rem;
-  text-align: justify;
-}
-
-
-/* ===========================
-  CONTENIDO PRINCIPAL (<main>)
-============================== */
-main.bd-main {
-  background-color: #2b3e50;
-  overflow: hidden;
-  flex-grow: 1;
-  flex-shrink: 1;
-  position: relative;
-}
-main li {
-  font-size: 1.3rem;
-  margin-left: 10px;
-}
-.hero.is-primary {
-  background-color: cadetblue;
 }
 #nav-toggle {
   position: absolute;
@@ -208,7 +196,7 @@ main li {
   background: #ffffff;
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   transition: all 300ms ease-in-out;
 }
 #nav-toggle span:before {
@@ -220,7 +208,8 @@ main li {
 #nav-toggle.active span {
   background-color: transparent;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
   top: 0;
 }
 #nav-toggle.active span:before {
@@ -230,9 +219,57 @@ main li {
   transform: rotate(-45deg);
 }
 
+/* CONTENIDO ASIDE 
+==================== */
+.barra-lateral {
+  display: block;
+  flex: 0 0 calc(15rem + 1.5rem);
+  background-color: darkslategray;
+}
+.barra-lateral p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* ===========================
+  CONTENIDO PRINCIPAL (<main>)
+============================== */
+main.bd-main {
+  background-color: #2b3e50;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+main li {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+.hero.is-primary {
+  background-color: cadetblue;
+}
+.tile h3 {
+  margin-top: 15px;
+}
+.nota {
+  background: #273848;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
 /*================================
  Vista ARITCULO
 ==================================*/
+
+/* tablas
+====================== */
+.tabla-atajos {
+  width: 100%;
+  background: #273848;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
 
 /* code
 ====================== */
@@ -303,27 +340,28 @@ pre[rel="COMMENT"]::before {
 pre[rel="CODIGO"]::before {
   background: #555;
 }
-code[class*="language-"], pre[class*="language-"] {
+code[class*="language-"],
+pre[class*="language-"] {
   white-space: pre-wrap;
   tab-size: 0;
-  -moz-tab-size:0;
+  -moz-tab-size: 0;
 }
 .number {
-	align-items: unset;
-	background-color: unset;
-	border-radius: unset;
-	display: unset;
-	font-size: unset;
-	height: unset;
-	justify-content: unset;
-	margin-right: unset;
-	min-width: unset;
-	padding: unset;
-	text-align: unset;
-	vertical-align: unset;
+  align-items: unset;
+  background-color: unset;
+  border-radius: unset;
+  display: unset;
+  font-size: unset;
+  height: unset;
+  justify-content: unset;
+  margin-right: unset;
+  min-width: unset;
+  padding: unset;
+  text-align: unset;
+  vertical-align: unset;
 }
 .tile h3 code {
-	font-size: 1.9rem;
+  font-size: 1.9rem;
 }
 
 /* Footer
@@ -336,8 +374,6 @@ footer {
 /*================================
  MEDIA QUERIES
 ==================================*/
-
-
 
 @media only screen and (max-width: 798px) {
   header {
@@ -372,8 +408,7 @@ footer {
   nav ul li a {
     padding: 15px;
     line-height: 20px;
-	padding-left: 25%;
-	 
+    padding-left: 25%;
   }
   nav ul li ul li a {
     padding-left: 30%;
@@ -386,12 +421,11 @@ footer {
     font-size: 1.2rem;
     background-color: #16212a;
   }
-  .nav-mo
-	.brand a img {
-		max-height: 60px;
-		margin-top: 5px;
+  .nav-mo .brand a img {
+    max-height: 60px;
+    margin-top: 5px;
   }
-  
+
   main {
     min-height: 50vh;
   }
