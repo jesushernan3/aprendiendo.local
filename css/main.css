@@ -22,6 +22,10 @@ a:visited {
 p {
   font-size: 1.5rem;
   letter-spacing: 0.5px;
+  text-align: justify;
+}
+article p {
+  text-indent: 25px;
 }
 hr {
   margin-top: 21px;
@@ -153,11 +157,9 @@ nav ul li ul li a {
   padding: 15px;
   line-height: 20px;
 }
-nav ul li ul {
-  left: 100px;
-}
+
 .nav-submenu {
-  left: 100px;
+  left: 100%;
 }
 .nueva {
   color: red;
@@ -255,7 +257,7 @@ main li {
   background: #273848;
   padding: 15px;
   border-radius: 3px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 /*================================
  Vista ARITCULO

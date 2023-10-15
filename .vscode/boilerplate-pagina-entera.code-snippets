@@ -1,0 +1,47 @@
+{
+  // Place your aprendiendo workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Boiler para creación de página entera en Aprendiendo": {
+    "scope": "html,php",
+    "prefix": "boileraprendiendo",
+    "body": [
+      "<?php",
+      "$raiz = \"/\";",
+      "include_once \"../../php/funciones-comunes.php\";",
+      "$titulo_pagina = '${1:titulo en la barra de nav}';",
+      "include \"../../inc/head.php\";",
+      "?>",
+      "<div class=\"container is-flex\">",
+      "<main class=\"bd-main section\">",
+      "<H1>${2:Titulo encabezado contenido}</H1>",
+      "<hr>",
+      "<div class=\"tile is-parent\">",
+      "<article class=\"tile is-child\">",
+      "<h3>${3:Encabezado de artículo</h3>",
+      "<p>$4</p>",
+      "</article>",
+      "</div>",
+      "</main>",
+      "<aside class=\"barra-lateral section\">",
+      "<h2>Htaccess info adicional</h2>",
+      "</aside>",
+      "</div>",
+      "<?php include(\"../../inc/foot.php\"); ?>"
+    ],
+    "description": "Atajo para la creación de una plantilla de página entera en Aprendiendo.test"
+  }
+}

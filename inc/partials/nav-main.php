@@ -29,11 +29,12 @@
         <li>
           <a href="<?php echo $raiz; ?>views/vistas-php/php-variables.php">Variables PHP</a></li>
         <li>
-          <a href="#!">Htaccess</a>
+          <a href="#!">htaccess</a>
           <!-- intento de colocar el sub menu dentro de menu principal, que se mueva hacia la derecha pero no está agarrando el css, no sé si es debido a jquery o lo que fuere pero cualquier directiva nueva en css no lo toma -->
           <ul class="nav-dropdown nav-submenu nueva">
-            <li class="nueva"><a href="<?php echo $raiz; ?>views/vistas-atajos/php-atajos-vscode.php">Atajos VS Code</a></li>
-            <li><a href="<?php echo $raiz; ?>views/vistas-atajos/php-atajos-emmet.php">Atajos Emmet</a></li>
+            <li class="nueva"><a href="<?php echo $raiz; ?>views/vistas-php/php-htacces-bases.php">Introducción</a></li>
+            <li class="nueva"><a href="<?php echo $raiz; ?>views/vistas-php/php-htacces-basico.php">Basico</a></li>
+            <li class="nueva"><a href="<?php echo $raiz; ?>views/vistas-php/php-htacces-url.php">Url</a></li>
           </ul>
         </li>
       </ul>

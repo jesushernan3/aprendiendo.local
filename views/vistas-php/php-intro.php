@@ -34,14 +34,6 @@ include("../../inc/head.php");
 
       </article>
     </div>
-
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        <h3>Muestra</h3>
-
-      </article>
-    </div>
-
     <div class="tile is-parent">
       <article class="tile is-child">
         <h3>Salida a Variables</h3>
