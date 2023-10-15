@@ -57,6 +57,19 @@ include "../../inc/head.php";
         <p>También puede incluir una descripción predeterminada para las listas de directorios que se muestra en la parte superior de la página colocando un archivo llamado 'HEADER' en el mismo directorio. El contenido de este archivo se muestra antes de la lista de contenidos del directorio. También puede incluir un pie de página, creando un archivo llamado 'README'. El contenido de este archivo se muestra después de la lista de contenidos del directorio.</p>
       </article>
     </div>
+    <div class="tile is-parent">
+      <article class="tile is-child">
+        <h3>Para qué se usa el fichero <b>.htaccess</b>?</h3>
+        <p>
+          <ol>
+            <li>Para convertir las url feas en url amigables</li>
+            <li>Para activar ciertos módulos de apache,ej. mod_deflate, expire, etc</li>
+            <li>Para hacer redicrecciones 301</li>
+            <li>Para controlar el acceso a tu sitio</li>
+          </ol>
+        </p>
+      </article>
+    </div>
 
 
 

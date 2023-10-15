@@ -39,7 +39,11 @@
         </li>
       </ul>
     </li>
-    <li><a href="#!">Snippets</a></li>
+    <li><a href="#!">Snippets</a>
+      <ul class="nav-dropdown">
+        <li><a href="<?php echo $raiz; ?>views/vistas-snippets/php-snippets-vscode.php">VS Code</a></li>
+      </ul>
+    </li>
     <li><a href="#">Atajos</a>
       <ul class="nav-dropdown">
         <li><a href="<?php echo $raiz; ?>views/vistas-atajos/php-atajos-vscode.php">Atajos VS Code</a></li>
